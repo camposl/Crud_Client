@@ -3,6 +3,7 @@ package com.lucas.devsuperior.desafio_crud.dto;
 import com.lucas.devsuperior.desafio_crud.entities.Client;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
@@ -16,6 +17,9 @@ public class ClientDTO {
     @PastOrPresent(message = "Insira uma data válida")
     private LocalDate birthDate;
     private Integer children;
+
+
+    public ClientDTO(){}
 
     public ClientDTO(Long id, String name, String cpf, Double income, LocalDate birthDate, Integer children) {
         this.id = id;
